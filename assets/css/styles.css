@@ -1,0 +1,221 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html, body {
+    font-size: 62.5%;
+}
+
+/* Main Nav */
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(2,3,6,1) 0%, rgba(15,17,24,1) 35%, rgba(13,14,20,1) 100%);
+    color: white;
+    height: 7rem;
+    padding: 0 3rem;
+}
+
+#main-nav #page-title {
+    font-size: 3rem;
+}
+
+#main-nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.75rem;
+}
+
+#main-nav div:first-child {
+    margin-right: 2rem;
+}
+
+#main-nav div a {
+    margin-left: 1rem;
+    cursor: pointer;
+    padding: .5rem 0;
+    color: white;
+    text-decoration: none;
+}
+
+#main-nav div a:hover {
+    border-bottom: 1px solid white;
+}
+
+/* Landing Showcase */
+#landing-showcase {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), 
+    url('../img/landing-img.jpg') top center/cover;
+    height: 50rem;
+    position: relative;
+}
+
+#landing-showcase__content {
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    color: white;
+}
+
+#landing-showcase__content > * {
+    margin-bottom: 1rem;
+}
+
+#landing-showcase__content h2 {
+    font-size: 5rem;
+    letter-spacing: .2rem;
+}
+
+#landing-showcase__content a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #020306;
+    color: white;
+    font-size: 1.5rem;
+    transition: background-color .3s ease;
+}
+
+#landing-showcase__content a:hover {
+    background-color: white;
+    color: #020306;
+    transition: background-color .3s ease;
+}
+
+#landing-showcase__content a i {
+    margin-right: 1rem;
+}
+
+
+/* Landing Page - Top Rated Section */
+.movies-section {
+    background-color: #181A28;
+    padding: 1.5rem 2rem;
+}
+
+.movies-section .section-heading {
+    color: white;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.movies-section-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+}
+
+.movies-section-container .movie {
+    background: url('https://images-na.ssl-images-amazon.com/images/I/91p8sSMXpkL._AC_SY679_.jpg') top center/cover;
+    max-width: 200px;
+    height: 300px;
+    margin: 1rem;
+    border-radius: 1rem;
+    transition: transform .3s ease;
+}
+
+.movies-section-container .movie:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
+
+/* Search Page Form */
+#search-box {
+    position: fixed;
+    top: 70px;
+    background: #3c3e48;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    padding: 3rem;
+    width: 100%;
+    outline: none;
+    font-size: 4rem;
+    transition: background .5s ease;
+}
+
+#search-box:focus {
+    background: rgb(75, 78, 90);
+    transition: background .5s ease;
+}
+
+/* Movie Search Results Container */
+.movie-results {
+    background-color: #181A28;
+    padding: 22rem 5rem 5rem 5rem;
+    min-height: 100vh;
+}
+
+.movie-results__heading h2 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.movie-results__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.movie-results__container .movie {
+    height: 170px;
+    width: 300px;
+    background: url('../img/landing-img.jpg') top center/cover;
+    border: 3px solid #181A28;
+    border-radius: .5rem;
+    transition: all .3s ease;
+    margin: 1rem;
+}
+
+.movie-results__container .movie:hover {
+    border: 3px solid white;
+    transform: scale(1.1);
+    transition: all .3s ease;
+}
+
+/* Footer */
+#main-footer {
+    background: linear-gradient(90deg, rgba(2,3,6,1) 0%, rgba(15,17,24,1) 35%, rgba(13,14,20,1) 100%);
+    height: 10rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-footer h2 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 760px) {
+    #main-nav {
+        padding: 0 1.25rem;
+    }
+
+    #main-nav #page-title {
+        font-size: 2.5rem;
+    }
+
+    #main-nav div {
+        font-size: 1.5rem;
+    }
+
+    #search-box {
+        padding: 2rem;
+        font-size: 3rem;
+    }
+}
