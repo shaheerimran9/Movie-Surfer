@@ -112,7 +112,7 @@ html, body {
 
 .movies-section-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
 }
 
 .movies-section-container .movie {
@@ -186,12 +186,67 @@ html, body {
 /* Movie Information Wrapper */
 .movie-wrapper {
     min-height: 100vh;
-    background: url('../img/landing-img.jpg') center center/cover no-repeat;
-    background-attachment: fixed;
 }
 
-.movie-wrapper p {
+.movie-wrapper__content { 
+    width: 100%;
+    padding: 10rem 4rem;
+}
+
+.movie-wrapper__content .movie-title {
+    font-size: 9rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.movie-wrapper__content .movie-plot {
+    width: 60%;
+    font-size: 2.2rem;
+    line-height: 4rem;
+    color: white;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.movie-wrapper__content a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    background-color: #020306;
+    color: white;
     font-size: 2rem;
+    transition: background-color .3s ease;
+    margin: 1rem 0;
+    border-radius: 1rem;
+}
+
+.movie-wrapper__content a:hover {
+    background-color: white;
+    color: #020306;
+    transition: background-color .3s ease;
+}
+
+.movie-wrapper__content a i {
+    margin-right: 1rem;
+}
+
+.back-btn {
+    outline: none;
+    border: none;
+    background-color: #020306;
+    color: white;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    margin-top: 5rem;
+    font-size: 1.75rem;
+    border-radius: .5rem;
+    transition: background-color .3s ease;
+}
+
+.back-btn:hover {
+    background-color: white;
+    color: #020306;
+    transition: background-color .3s ease;
 }
 
 /* Footer */
@@ -227,5 +282,13 @@ html, body {
     #search-box {
         padding: 2rem;
         font-size: 3rem;
+    }
+
+    .movie-wrapper__content {
+        padding: 10rem 2.5rem;
+    }
+
+    .movie-wrapper__content .movie-plot {
+        width: 90%;
     }
 }
