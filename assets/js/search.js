@@ -11,6 +11,11 @@ function createMovie(movieData, container) {
     movie.classList.add('movie');
     // Set movie poster as background of element
     movie.style.background = `url('https://image.tmdb.org/t/p/w500${movieData.poster_path}') top center/cover`
+    // Set movie ID in session storage and navigate to movie page on click
+    movie.onclick = () => {
+        sessionStorage.setItem('movieID', movieData.id)
+        window.location = 'movie.html'
+    }
     // Append movie element to movie container
     container.appendChild(movie);
 }
@@ -20,6 +25,7 @@ function displayPlaceholderMovies() {
     fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=820d6db8746f3de6a93c6c922bf8074e&language=en-US&adult=false`)
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             const movies = data.results;
             movies.forEach(movie => {
                 createMovie(movie, moviesResultsContainer);
