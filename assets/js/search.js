@@ -10,7 +10,7 @@ function createMovie(movieData, container) {
     // Add .movie class to element
     movie.classList.add('movie');
     // Set movie poster as background of element
-    movie.style.background = `url('https://image.tmdb.org/t/p/w500${movieData.backdrop_path}') top center/cover`
+    movie.style.background = `url('https://image.tmdb.org/t/p/w500${movieData.poster_path}') top center/cover`
     // Append movie element to movie container
     container.appendChild(movie);
 }
