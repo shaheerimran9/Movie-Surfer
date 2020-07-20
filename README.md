@@ -11,4 +11,4 @@ The search tab redirects to the search page where a section of latest movies is 
 - Javascript
 
 ### Live Link
-Click [here](https://cranky-curie-f9b372.netlify.app/) to try out Movie Surfer live.
+Click [here](https://shaheer-moviesurfer.netlify.app/) to try out Movie Surfer live.
